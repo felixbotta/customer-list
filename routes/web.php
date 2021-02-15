@@ -21,7 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-# Customer List
+# Companies
 Route::get('/companies', 'CompaniesController@index')->middleware('auth');
 Route::get('/companies/new', 'CompaniesController@new')->middleware('auth');
 Route::post('companies/add', 'CompaniesController@add')->middleware('auth');
@@ -29,7 +29,7 @@ Route::get('companies/{id}/edit', 'CompaniesController@edit')->middleware('auth'
 Route::post('/companies/update/{id}', 'CompaniesController@update')->middleware('auth');
 Route::delete('/companies/delete/{id}', 'CompaniesController@delete')->middleware('auth');
 
-# Customers List
+# Customers
 Route::get('/customers', 'CustomersController@index')->middleware('auth');
 Route::get('/customers/new', 'CustomersController@new')->middleware('auth');
 Route::post('customers/add', 'CustomersController@add')->middleware('auth');
